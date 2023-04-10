@@ -1,0 +1,164 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 10%;
+}
+
+header nav {
+    background-color: #FFF;
+}
+
+header nav .nav-icons a i {
+    font-size: 1.6rem;
+}
+
+header nav .nav-icons a img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+header nav form input::placeholder {
+    opacity: 0 !important;
+}
+
+section .content .center {
+    max-width: 30rem;
+}
+
+section .content .center .stories {
+    max-width: 30rem;
+    overflow-x: scroll;
+}
+
+section .content .center .stories::-webkit-scrollbar {
+    display: none;
+}
+
+section .content .center .stories img {
+    margin: 0 .5rem;
+}
+
+section .content .center .stories img,
+section .content .profile img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+section .content .posts .card .card-header img,
+section .aside img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+#commentsdiv {
+    max-height: 5rem;
+    overflow-wrap: normal;
+    overflow-y: scroll;
+}
+
+#modalcomments {
+    height: 25rem;
+    width: 25rem;
+    overflow-wrap: normal;
+    overflow-y: scroll;
+}
+
+#modalcomments::-webkit-scrollbar {
+    display: none;
+}
+
+#commentsdiv::-webkit-scrollbar {
+    display: none;
+}
+
+
+section .content .center .stories img {
+    border: 3px solid rgb(255, 198, 74);
+}
+
+section .content .center .stories a {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    word-wrap: break-word;
+}
+
+
+
+section .content .center .posts .card .post-image img {
+    border-radius: 0 !important;
+}
+
+section .content .aside {
+    max-width: 30rem;
+}
+
+section .content .aside .sidebar {
+    position: fixed;
+}
+
+@media screen and (max-width: 990px) {
+    header {
+        margin-bottom: 20%;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+
+    header {
+        margin-bottom: 15%;
+    }
+
+    header nav .search {
+        display: none;
+    }
+
+    section .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section .content .center {
+        margin: 0 !important;
+    }
+
+    section .content .aside {
+        width: 100%;
+    }
+
+    section .content .aside .sidebar {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    section .content .center .stories {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        margin-bottom: 25%;
+    }
+
+    header nav .nav-icons button {
+        font-size: 1.2rem;
+    }
+
+    header nav .nav-icons button {
+        display: none;
+    }
+}

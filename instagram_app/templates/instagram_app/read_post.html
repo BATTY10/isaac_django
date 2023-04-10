@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<main class="body" style="min-height: 100vh;">
+
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-det" style="text-align: justify;">
+                        <img src="" alt="story image" loading='lazy'>
+                        <h3>{{single_post.post_title}}</h3>
+                        <p>{{single_post.post}}</p>
+                    </div>
+                    <div class="make-post" style="width: 100%;">
+
+                        <!-- form here-->
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {% for fields in  create_comment %}
+                            <div class="input-group">
+                                <label for="form-label">Make Comment</label>
+                               {{fields }}
+                            </div>
+                            {% endfor %}
+                            <button>Post</button>
+                        </form>
+                    </div>
+                    <!-- <p class="comment-btn" style="margin-top: 40px; color:grey;">{{count}} comments</p> -->
+                    <div class="comment">
+                        <p>{{comment.body}}</p>
+                    </div>
+                    <strong><a href="">Delete Post</a></strong>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+
+{% endblock %}
