@@ -17,20 +17,24 @@
                         <!-- form here-->
                         <form action="" method="post">
                             {% csrf_token %}
-                            {% for fields in  create_comment %}
+                            {% for fields in create_comment %}
                             <div class="input-group">
                                 <label for="form-label">Make Comment</label>
-                               {{fields }}
+                                {{fields }}
                             </div>
                             {% endfor %}
                             <button>Post</button>
                         </form>
                     </div>
+                    {% for comment in comment %}
                     <!-- <p class="comment-btn" style="margin-top: 40px; color:grey;">{{count}} comments</p> -->
                     <div class="comment">
-                        <p>{{comment.body}}</p>
+                        <p>{{comment.body}} <small class="text-muted text-small">{{comment.date_created | timesince }}
+                                ago</small></p>
                     </div>
-                    <strong><a href="">Delete Post</a></strong>
+                    {% endfor %}
+                    <strong><a href="{% url 'update_post' single_post.id %}">Edit Post</a></strong>
+                    <strong><a href="{% url 'delete_post' single_post.id %}">Delete Post</a></strong>
                 </div>
             </div>
         </div>

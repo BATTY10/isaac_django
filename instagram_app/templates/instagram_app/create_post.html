@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block content%}
+<div>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for posts in post %}
+        <div>
+            <label for="form-label">{{posts.label}}</label>
+            {{posts}}
+        </div>
+        {% endfor %}
+        <button>Make a Post</button>
+    </form>
+</div>
+{% endblock %}
