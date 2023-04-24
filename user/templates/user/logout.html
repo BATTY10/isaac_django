@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block content%}
+<div class="col-md-6 mx-auto">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+            <label for="form-label">{{field.label}}</label>
+            {{field}}
+        </div>
+        {% endfor %}
+        <button>Log out </button>
+    </form>
+</div>
+{% endblock %}
