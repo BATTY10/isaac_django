@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Post, Comment
 from .form import Create_Comment_Form, Create_PostForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -54,3 +55,8 @@ def delete_post(request, pk):
     delete_post_id = Post.objects.get(pk=pk)
     delete_post_id.delete()
     return redirect('/')
+
+@login_required
+def about(request):
+    context ={}
+    return render(request, 'instagram_app/about.html', context)

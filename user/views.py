@@ -15,5 +15,5 @@ def register(request):
             return redirect('/')
         else:
             messages.error(request, 'Account creation failed')
-    context = {"register_form": register_form}
+    context = {"forms": register_form}
     return render(request, 'user/register.html', context)
